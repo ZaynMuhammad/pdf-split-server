@@ -1,0 +1,24 @@
+{
+  "name": "server",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/pdf-parse": "^1.1.5"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "hono": "^4.7.10",
+    "pdf-lib": "^1.17.1",
+    "pdf-parse": "1.1.1",
+    "pdf2json": "^3.1.6",
+    "pdfjs-dist": "^5.2.133",
+    "uploadthing": "^7.7.2"
+  },
+  "patches": {
+    "pdf-parse@1.1.1": "./.bun/patches/pdf-parse@1.1.1.patch"
+  }
+}
